@@ -108,4 +108,8 @@ const option = optionList.querySelector('.option');
 for(i=0; i < option.length; i++) {
     option[i].setAttribute('onclick', 'optionSelected(this)');
 }
-}
+};
+
+//creating the new div tags for icons//
+let tickIconTag = '<div class = 'icon tick'><i class="fa-solid fa-check"></i></div>';
+let crossIconTag = '<div class = 'icon cross'><i class="fa-solid fa-xmark"></i></div>';
