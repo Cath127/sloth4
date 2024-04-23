@@ -1,2 +1,30 @@
 <!--Google Font imported-->
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Happy+Monkey",sans-serif;
+}
+
+body {
+  background-color: #007bff;
+}
+
+::selection {
+  color: #fff;  
+  background: #007bff;
+}
+
+.start-btn,
+.info-box,
+.quiz-box,
+.result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0.2);
+              0 6px 20px 0 rgba(0,0,0.19);
+}
