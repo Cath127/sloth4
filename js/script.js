@@ -67,3 +67,23 @@ quitQuiz.onclick = () => {
 
 const nextBtn = document.querySelector('footer .next-btn');
 const queCounter = document.querySelector('footer .totalQue');
+
+//if next Btn is clicked//
+nextBtn.onclick = () => {
+    if(queCount < quuestions.length -1){ //if question count is less than total question length
+        queCount++; //increment the queCount value
+        queNumb++; //increment the queNumb value
+        showQuestions(queCount); //calling showQuestions function
+        queCounter(queNumb); //passing the queNumb value to queCounter
+        clearInterval(counter); //clear counter
+        clearInterval(counterLine); //clear counterLine
+        startTimer(timeValue); //calling startTimer function
+        startTimerLine(widthValue); //calling startTimerLine function
+        timeText.textContent = 'Time left'; //change the Timetext to Time left
+        nextBtn.classList.remove('show'); //hide the next button      
+    } else {
+        clearInterval(counter); //clear counter
+        clearInterval(counterLine); //clear counterLine
+        showResult(); //calling showResult function
+    }
+}
