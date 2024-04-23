@@ -1,4 +1,4 @@
-<!--Google Font imported-->
+/*Google Font Imported */
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
 * {
@@ -27,4 +27,25 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px 0 rgba(0,0,0.2);
               0 6px 20px 0 rgba(0,0,0.19);
+}
+
+.info-box.activeInfo,
+.quiz-box.activeQuiz,
+.result-box.activeResult {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.start-btn button {
+  font-size: 25px;
+  font-weight: 500;
+  color: #007bff;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
 }
