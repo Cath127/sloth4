@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quiz App - Easy Tutorials</title>
+  <title>Super Sloth Quiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
-  <h1>Simple Quiz</h1>
-  <div class="quiz">
-    <h2 id="question">Question goes here</h2>
-    <div id="answer-buttons">
-      <button class="btn">Answer 1</button>
-      <button class="btn">Answer 2</button>
-      <button class="btn">Answer 3</button>
-      <button class="btn">Answer 4</button>
-    </div>
-    <button id="next-btn">Next</button>
-  </div>
-</div>
+  <!--Fontawesome link-->
+  <script src="https://kit.fontawesome.com/54a37ef757.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+
+
+  <!--Start Quiz Button-->
+  <div class="start-btn"><button>Start Quiz</button></div>
+
+  <!--Info Box-->
+  <div class="info-box">
+    <div class="info-title"><span>Some Rules of this Quiz</span></div>
+    <div class="info-list">
+      <div class="info">1. There are 10 questions to answer.</div>
+      <div class="info">2. If you answer correctly the button turns green otherwise it turns red</div>
+      <div class="info">3. Can you answer all 10 correctly to become a super sloth?</div>
+    </div>
+    <div class="buttons">
+      <button class="quit">Exit Quiz</button>
+      <button class="restart">Continue</button>
+    </div>
+  </div>
+
+
+  <!--Quiz Box-->
+  <div class="quiz-box">
+    <header>
+      <div class="title">Super Sloth Quiz</div>
+      <div class="timer">
+        <div class="time-left-text">Time Left</div>
+        <div class="timer-sec">15</div>
+      </div>
+      <div class="time-line"></div>
+    </header>
+    <section>
+      <div class="que-text">
+        <!--Questions in Javascript-->
+      </div>
+      <div class="option-list"></div>
+      <!--Options in JavaScript-->
+    </section>
+
+    <!--Footer of Quiz Box-->
+    <footer>
+      <div class="total-que">
+        <!--Question count number in JavaScript-->
+      </div>
+      <button class="next-btn">Next Que</button>
+    </footer>
+  </div>
+
+  <!--Result Box-->
+  <div class="result-box">
+    <div class="result-box">
+      <div class="icon">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+      <div class="complete-text">You've completed the Quiz</div>
+      <div class="score-text">
+        <!-- Insert score from JavaScript-->
+      </div>
+      <div class="buttons">
+        <button class="restart">Replay Quiz</button>
+        <button class="quiz">Quit Quiz</button>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>
