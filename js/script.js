@@ -89,3 +89,23 @@ nextBtn.onclick = () => {
 }
 
 //getting questions and options from array//
+function showQuestions(index) {
+    const queText = document.querySelector('.que-text');
+
+
+//creating a new span and div for questions and options and passing the value using an array//
+let queTag = '<span>' + questions[index].numb + '. ' + questions[index].question +'</span>';
+let optionTag = '<div class='option><span>' + questions[index].options[0] + '</span></div>'
++ '<div class='option'><span>' + questions[index].options[1] + '</span></div>'
++ '<div class='option'><span>' + questions[index].options[2] + '</span></div>'
++ '<div class='option'><span>' + questions[index].options[3] + '</span></div>'
+queText.innerHTML = QueTag;  //adding new span tag inside option tag//
+optionList.innerHTML = optionTag; //adding new div tag inside option tag
+
+const option = optionList.querySelector('.option');
+
+//set onclick attribute to all available options//
+for(i=0; i < option.length; i++) {
+    option[i].setAttribute('onclick', 'optionSelected(this)');
+}
+}

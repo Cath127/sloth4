@@ -90,7 +90,7 @@ let questions = [
     {
       numb:9
         question: 'Which sense is the best for sloths?',
-        answer: smell
+        answer: 'smell'
         options: [
           'sight',
           'taste',
@@ -102,6 +102,7 @@ let questions = [
       numb:10
         question: 'What is the main diet of a sloth?',
         answer: 'leaves',
+        options:
         [
           'insects',
           'meat',
