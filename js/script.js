@@ -87,3 +87,5 @@ nextBtn.onclick = () => {
         showResult(); //calling showResult function
     }
 }
+
+//getting questions and options from array//
