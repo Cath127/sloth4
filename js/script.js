@@ -25,7 +25,7 @@ continueBtn.onclick = () => {
     infoBox.classList.remove('activeInfo'); //hide info box//
     quizBox.classList.add('activeQuiz'); //show quiz box //
     showQuestions(0); //calling show questions function //
-    queCounter(1); //passing 1 parameter to QueCounter
+    queCounter(1); //passing 1 parameter to queCounter
     startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function 
 }
@@ -35,7 +35,7 @@ let queCount = 0;
 let queNumb = 1;
 let userScore = 0;
 let counter;
-let CounterLine;
+let counterLine;
 let widthValue = 0;
 
 const restartQuiz = resultBox.querySelector('.buttons .restart');
@@ -53,7 +53,7 @@ restartQuiz.onclick = () => {
     showQuestions(queCount); //calling show questions function//
     queCounter(queNumb); //passing queNumb value to queCounter//
     clearInterval(counter); //clear Counter
-    clearInterval(CounterLine); //clear Counter Line
+    clearInterval(counterLine); //clear Counter Line
     startTimer(timeValue); //calling startTime function
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = 'Time left'; // Change the text of timeText to Time left
@@ -70,7 +70,7 @@ const queCounter = document.querySelector('footer .totalQue');
 
 //if next Btn is clicked//
 nextBtn.onclick = () => {
-    if(queCount < quuestions.length -1){ //if question count is less than total question length
+    if(queCount < questions.length -1){ //if question count is less than total question length
         queCount++; //increment the queCount value
         queNumb++; //increment the queNumb value
         showQuestions(queCount); //calling showQuestions function
@@ -102,13 +102,12 @@ let optionTag = '<div class='option><span>' + questions[index].options[0] + '</s
 queText.innerHTML = QueTag;  //adding new span tag inside option tag//
 optionList.innerHTML = optionTag; //adding new div tag inside option tag
 
-const option = optionList.querySelector('.option');
+const option = optionList.querySelectorAll('.option');
 
 //set onclick attribute to all available options//
 for(i=0; i < option.length; i++) {
     option[i].setAttribute('onclick', 'optionSelected(this)');
 }
-};
 
 //creating the new div tags for icons//
 let tickIconTag = '<div class = 'icon tick'><i class="fa-solid fa-check"></i></div>';
